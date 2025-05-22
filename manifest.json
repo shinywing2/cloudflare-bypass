@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Cloudflare Bypass Extension",
+  "version": "1.0",
+  "description": "Detects and attempts to bypass Cloudflare Turnstile challenges.",
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content_script.js"]
+  }],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/cf_bypass_logo_16.png",
+      "48": "assets/cf_bypass_logo_48.png",
+      "128": "assets/cf_bypass_logo_128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/cf_bypass_logo_16.png",
+    "48": "assets/cf_bypass_logo_48.png",
+    "128": "assets/cf_bypass_logo_128.png"
+  }
+}

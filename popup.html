@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cloudflare Bypass Settings</title>
+  <style>
+    body { font-family: sans-serif; width: 300px; padding: 10px; }
+    label { display: block; margin-top: 10px; }
+    input[type="number"], select { width: 100%; padding: 5px; margin-top: 5px; box-sizing: border-box; }
+    button { margin-top: 15px; padding: 10px; width: 100%; }
+    #statusArea { margin-top: 10px; color: gray; }
+  </style>
+</head>
+<body>
+  <h1>Cloudflare Bypass Settings</h1>
+
+  <section id="settings">
+    <label for="mode">Mode:</label>
+    <select id="mode" name="mode">
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+
+    <label for="timeout">Timeout (seconds):</label>
+    <input type="number" id="timeout" name="timeout" min="1">
+
+    <label for="interval">Interval (seconds):</label>
+    <input type="number" id="interval" name="interval" min="1">
+  </section>
+
+  <button id="bypassButton">Bypass on this page</button>
+
+  <p id="statusArea">Ready.</p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
